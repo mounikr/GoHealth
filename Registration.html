@@ -1,0 +1,88 @@
+<html>
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<style>
+			.panel {display: none;}
+		</style>
+		
+		<script>
+		
+			$(document).ready(function(){
+					$("#show").change(function(){
+						$(".panel").show();
+						$("#id").val("");
+						$("#first").val("");
+						$("#last").val("");
+					});
+					
+					$("#hide").change(function(){
+						$(".panel").hide();
+						$("#id").val("a");
+						$("#first").val("b");
+						$("#last").val("c");
+
+					});
+			});
+		
+		
+		</script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="Reg.css">
+
+			
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	</head>
+	
+	<body>
+		<div class="container">
+			<br><br><br>
+			<form method="post" action="/">
+				
+				<div class="col-xs-4"><br>
+
+				<h2 class="label-primary" style="color:white;"> Patient Registration Form </h2>
+				
+				</div>
+				<div class="col-xs-8"><br>
+
+				<input type = "text" name="first_name"  class="form-control" placeholder="First name" required><br><br>
+				<input type = "text" name="last_name" class="form-control" placeholder="Last name"  required><br><br>
+				<input type = "date" name="dob" class="form-control" placeholder="Date of Birth" required><br><br>
+				<div class="radio" onclick="insuranceCheck()">
+					<label class=" label-basic">Insurance</label>&nbsp;&nbsp;&nbsp;&nbsp;	
+					<label><input type="radio" name="optradio" value="true" id="show" >Yes</label>&nbsp;&nbsp;
+					<label><input type="radio" name="optradio" value="false" id="hide" checked="checked" >No</label>
+				</div><br><br>
+				
+				<div class="panel" id="one">
+					<input type = "text" id="id" value="345123987" name="provider_id"  class="form-control" placeholder="Providers identifier" required><br><br>
+					<input type = "text" id="first" value="Marty" name="provider_first_name"  class="form-control" placeholder="Providers First name" required><br><br>
+					<input type = "text" id="last" value="Seeger" name="provider_last_name" class="form-control" placeholder="Providers Last name" required><br><br>
+					<select id="sel1" name="agent">
+						<option>Aetna</option>
+						<option>United Health Care</option>
+						<option>Blue Cross/Blue Shield</option>
+						<option>Cigna</option>
+						<option>No Insurance</option>
+					</select>
+				</div>
+				
+				<input class="btn btn-success" type="submit">
+
+				</div>
+
+			</form>
+		</div> 
+	</body>
+
+
+
+</html>
